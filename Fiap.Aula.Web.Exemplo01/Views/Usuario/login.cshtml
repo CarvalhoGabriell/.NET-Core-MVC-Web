@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Login User";
+}
+<h1>Login</h1>
+
+<div>
+   @TempData["msg"]
+    @TempData["user"]
+   
+</div>
+
+<form method="post">
+    <div class="mb-3">
+        <label for="id-nome" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
+    </div>
+
+    <div class="mb-3">
+        <label for="id-email" class="form-label">Email Addres</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Exemplo: churros@fiap.com.br">
+    </div>
+
+    <div class="mb-3">
+        <label for="id-date" class="form-label">Birthday Date</label>
+        <input type="date" class="form-control" id="dateNasc" name="dateNasc" placeholder="Exemplo: 10/11/1999">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-outline-success">Entrar</button>
+    </div>
+
+</form>

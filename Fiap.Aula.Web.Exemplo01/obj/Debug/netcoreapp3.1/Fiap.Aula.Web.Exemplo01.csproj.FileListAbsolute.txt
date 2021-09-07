@@ -1,0 +1,78 @@
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.exe
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.deps.json
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.runtimeconfig.json
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.runtimeconfig.dev.json
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.dll
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.pdb
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.Views.dll
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.Views.pdb
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.csproj.AssemblyReference.cache
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.AssemblyInfoInputs.cache
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.AssemblyInfo.cs
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.RazorAssemblyInfo.cache
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.RazorAssemblyInfo.cs
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\staticwebassets\Fiap.Aula.Web.Exemplo01.StaticWebAssets.Manifest.cache
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\staticwebassets\Fiap.Aula.Web.Exemplo01.StaticWebAssets.xml
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\scopedcss\bundle\Fiap.Aula.Web.Exemplo01.styles.css
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.TagHelpers.input.cache
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.TagHelpers.output.cache
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.RazorCoreGenerate.cache
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.RazorTargetAssemblyInfo.cache
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.RazorTargetAssemblyInfo.cs
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.Views.pdb
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.dll
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.pdb
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.genruntimeconfig.cache
+C:\Users\Gabriel\source\repos\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.csproj.CopyComplete
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.exe
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.deps.json
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.runtimeconfig.json
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.runtimeconfig.dev.json
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.dll
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.pdb
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.Views.dll
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\bin\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.Views.pdb
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.csproj.AssemblyReference.cache
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.AssemblyInfoInputs.cache
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.AssemblyInfo.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.RazorAssemblyInfo.cache
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.RazorAssemblyInfo.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\staticwebassets\Fiap.Aula.Web.Exemplo01.StaticWebAssets.Manifest.cache
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\staticwebassets\Fiap.Aula.Web.Exemplo01.StaticWebAssets.xml
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\scopedcss\bundle\Fiap.Aula.Web.Exemplo01.styles.css
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.TagHelpers.input.cache
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.TagHelpers.output.cache
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.RazorCoreGenerate.cache
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Produto\Index.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.RazorTargetAssemblyInfo.cache
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.RazorTargetAssemblyInfo.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.Views.pdb
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.dll
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.pdb
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.genruntimeconfig.cache
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Fiap.Aula.Web.Exemplo01.csproj.CopyComplete
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Produto\cadastro.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\login.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Index.cshtml.g.cs

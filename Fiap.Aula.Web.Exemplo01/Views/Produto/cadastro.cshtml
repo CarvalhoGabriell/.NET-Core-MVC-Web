@@ -1,0 +1,60 @@
+﻿<!--@Model Usuario-->
+
+@{
+    ViewData["Title"] = "Cadastro";
+}
+<h1>Cadastro</h1>
+<!--
+/*@if (Model != null)
+{
+    <div class=" alert alert-success">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
+}
+*/
+-->
+<div>
+
+    Temp Data:
+    @TempData["msg"] <br />
+    @TempData["nome"]
+</div>
+
+@if (ViewBag.prod != null)
+{
+    <div>
+
+        View Bag: @ViewBag.qtd
+        @ViewBag.prod.Nome
+        @ViewBag.prod.Preco
+
+
+    </div>
+
+}
+
+<form method="post">
+    <div class="mb-3">
+        <label for="id-nome" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do produto">
+    </div>
+
+    <div class="mb-3">
+        <label for="id-preco" class="form-label">Price</label>
+        <input type="number" class="form-control" id="preco" name="preco" placeholder="R$ 0,00">
+    </div>
+
+    <div class="mb-3">
+        <label for="id-qtd" class="form-label">Quantidade (UN)</label>
+        <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Quantidade unitário">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-outline-success">Cadastrar</button>
+    </div>
+
+</form>
