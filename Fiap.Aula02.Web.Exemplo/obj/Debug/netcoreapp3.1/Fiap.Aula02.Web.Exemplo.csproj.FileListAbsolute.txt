@@ -352,3 +352,5 @@ C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula02
 C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula02.Web.Exemplo\obj\Debug\netcoreapp3.1\Fiap.Aula02.Web.Exemplo.pdb
 C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula02.Web.Exemplo\obj\Debug\netcoreapp3.1\Fiap.Aula02.Web.Exemplo.genruntimeconfig.cache
 C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula02.Web.Exemplo\obj\Debug\netcoreapp3.1\Razor\Views\Padaria\Cadastro.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula02.Web.Exemplo\obj\Debug\netcoreapp3.1\Razor\Views\Padaria\Index.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.Aula02.Web.Exemplo\obj\Debug\netcoreapp3.1\Razor\Views\Padaria\Editar.cshtml.g.cs
