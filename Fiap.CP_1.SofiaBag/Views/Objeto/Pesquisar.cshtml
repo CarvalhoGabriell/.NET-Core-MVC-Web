@@ -1,0 +1,69 @@
+﻿@model List<Objetos>
+
+@{
+    ViewData["title"] = "Seus Objetos para SofiaBag";
+}
+
+<sucess-msg mensagem="@TempData["msg"]"></sucess-msg>
+
+<button type="button" style="margin-bottom:1rem" class="btn btn-primary btn-lg btn-block">Seus Objetos encontrados</button>
+
+<table class="table table-hover table-info">
+    <tr>
+        <th>RFID</th>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Status Atual</th>
+        <th>Data Cadastro</th>
+        <th>Cor</th>
+        <th>Ações</th>
+    </tr>
+
+    @foreach (var itens in Model)
+    {
+        <tr>
+            <td>@itens.Codigo</td>
+            <td>@itens.Nome</td>
+            <td>@itens.Descricao</td>
+            <td>@(itens.Ativo?"True":"False")</td>
+            <td>@itens.DtCadastro.ToShortDateString()</td>
+            <td>@itens.Cor</td>
+            <td>
+                <button onclick="idObject.value = @itens.Codigo" type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">Remover</button>
+                <a class="btn btn-sm btn-info" asp-action="editar" asp-route-id="@itens.Codigo">Editar</a>
+            </td>
+
+        </tr>
+    }
+</table>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmação Remover</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                Ops :( <br />
+                Deseja Mesmo Deletar esse Objeto? <br />
+                Adeus Sofia...
+            </div>
+            <div class="modal-footer">
+                <form asp-action="deletar">
+                    <!-- O atributo "id deve ser o mesmo informado no metodo POST da action de remover"-->
+                    <input type="hidden" name="id" id="idObject" />
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Sim</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

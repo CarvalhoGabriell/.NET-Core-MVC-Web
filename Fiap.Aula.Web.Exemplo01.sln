@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.Aula.Web.Exemplo01", "Fiap.Aula.Web.Exemplo01\Fiap.Aula.Web.Exemplo01.csproj", "{09717CBA-9A71-4926-A8C6-719606F8579E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.Aula02.Web.Exemplo", "Fiap.Aula02.Web.Exemplo\Fiap.Aula02.Web.Exemplo.csproj", "{B600C13B-2F07-46AF-9560-CB0AD5DD71FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fiap.Aula02.Web.Exemplo", "Fiap.Aula02.Web.Exemplo\Fiap.Aula02.Web.Exemplo.csproj", "{B600C13B-2F07-46AF-9560-CB0AD5DD71FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.CP_1.SofiaBag", "Fiap.CP_1.SofiaBag\Fiap.CP_1.SofiaBag.csproj", "{E225C637-3414-4906-B7E3-5437A7250DA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B600C13B-2F07-46AF-9560-CB0AD5DD71FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B600C13B-2F07-46AF-9560-CB0AD5DD71FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B600C13B-2F07-46AF-9560-CB0AD5DD71FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E225C637-3414-4906-B7E3-5437A7250DA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E225C637-3414-4906-B7E3-5437A7250DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E225C637-3414-4906-B7E3-5437A7250DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E225C637-3414-4906-B7E3-5437A7250DA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
