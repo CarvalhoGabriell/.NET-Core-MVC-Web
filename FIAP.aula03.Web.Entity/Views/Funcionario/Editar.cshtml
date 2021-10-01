@@ -1,0 +1,25 @@
+﻿@model Funcionario
+
+@{
+    ViewData["title"] = "Editar dados do Funcionario";
+}
+
+<div class="badge badge-info">
+    <h1>Editando Funcionário</h1>
+</div>
+
+<mensagem texto="@TempData["msg"]"></mensagem>
+
+<form asp-action="Editar">
+
+    <input asp-for="FuncionarioId"/>
+
+    <partial name="_Form" />
+
+    <div style="margin-top:15px; padding:15px; margin-left:410px;flex:initial;justify-content:space-between">
+        <input type="submit" class="btn btn-lg btn-success" value="Salvar" />
+        <a asp-action="index" class="btn btn-lg btn-danger">Cancelar</a>
+        <a asp-action="index" class="btn btn-lg btn-info">Lista Funcionarios</a>
+    </div>
+
+</form>

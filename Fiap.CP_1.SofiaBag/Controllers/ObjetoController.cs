@@ -71,7 +71,7 @@ namespace Fiap.CP_1.SofiaBag.Controllers
             if ( !String.IsNullOrEmpty(searchName))
             {
                 //nomes = nomes.Where(str => str.Nome.Contains(nomePesquisado));
-               var search = _banco.Where(str => str.Nome.Contains(searchName));
+               var search = _banco.Where(str => str.Nome.Contains(searchName)).ToList();
 
                 return View(search);
             }

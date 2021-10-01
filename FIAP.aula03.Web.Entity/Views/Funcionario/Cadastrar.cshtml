@@ -1,0 +1,20 @@
+﻿
+@model Funcionario
+
+@{
+    ViewData["title"] = "Cadastro de Funcionario";
+}
+
+<mensagem texto="@TempData["msg"]"></mensagem>
+
+<h1>Cadastro de Funcionario</h1>
+
+<form asp-action="Cadastrar">
+
+    <partial name="_Form" />
+
+    <div style="margin-top:15px; padding:15px; margin-left:410px">
+        <input type="submit" class="btn btn-lg btn-success" value="Cadastrar" />
+        <a asp-action="index" class="btn btn-lg btn-danger">Funcionarios</a>
+    </div>
+</form>

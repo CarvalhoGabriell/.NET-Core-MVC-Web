@@ -6,9 +6,9 @@
 
 <sucess-msg mensagem="@TempData["msg"]"></sucess-msg>
 
-<button type="button" style="margin-bottom:1rem" class="btn btn-primary btn-lg btn-block">Seus Objetos encontrados</button>
+<button type="button" style="margin-bottom:1rem" class="btn btn-primary btn-lg btn-block">Seus Objetos Pesquisados</button>
 
-<table class="table table-hover table-info">
+<table class="table table-bordered table-dark">
     <tr>
         <th>RFID</th>
         <th>Nome</th>
@@ -30,7 +30,7 @@
             <td>@itens.Cor</td>
             <td>
                 <button onclick="idObject.value = @itens.Codigo" type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">Remover</button>
-                <a class="btn btn-sm btn-info" asp-action="editar" asp-route-id="@itens.Codigo">Editar</a>
+                <a class="btn btn-sm btn-warning" asp-action="editar" asp-route-id="@itens.Codigo">Editar</a>
             </td>
 
         </tr>

@@ -1,0 +1,88 @@
+﻿@model List<Funcionario>
+
+
+@{
+    ViewData["title"] = "Lista Funcionarios";
+}
+
+
+<h1>Funcionarios</h1>
+
+
+<mensagem texto="@TempData["msg"]"></mensagem>
+
+<form class="form-inline">
+    <div class="form-group mb-2">
+        <label class="sr-only">Pesquisa</label>
+        <input type="text" class="form-control" name="nomeBuscado" placeholder="Pesquise por um Nome...">
+    </div>
+
+    <div style="margin-left:1.5rem" class="form-group mb-2">
+        <label class="sr-only">Pesquisa Genero</label>
+        <select class="form-control" name="genBuscado" asp-items="@Html.GetEnumSelectList<Genero>()">
+            <option>Selecione um genêro</option>
+        </select>
+    </div>
+    <input style="margin-left:1rem" type="submit" class="btn btn-primary mb-2" value="Pesquisar" />
+</form>
+
+@if (Model.Count == 0)
+    {
+       <mensagem texto="Nenhum dado encontrado, verifique os parâmetros" class="alert alert-warning"></mensagem>
+    }
+
+<table class="table table-hover table-striped table-secondary">
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Salario</th>
+        <th>Data Contratação</th>
+        <th>Status</th>
+        <th>Gênero</th>
+        <th>Ações</th>
+    </tr>
+
+    @foreach (var itens in Model)
+    {
+        <tr>
+            <td>@itens.FuncionarioId</td>
+            <td>@itens.Nome</td>
+            <td>@itens.Salario.ToString("n")</td>
+            <td>@itens.DataContratacao.GetValueOrDefault().ToShortDateString()</td>
+            <td>@(itens.Ativo.GetValueOrDefault()?"Ativo": "Inativo")</td>
+            <td>@itens.Genero</td>
+            <td>
+                <a asp-route-id="@itens.FuncionarioId" asp-action="Editar" class="btn btn-sm btn-dark">Editar</a>
+                <button onclick="idFuncionario.value = @itens.FuncionarioId" class="btn btn-sm btn-warning" type="button" data-toggle="modal" data-target="#exampleModal">Remover</button>
+            </td>
+        </tr>
+    }
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:mediumpurple">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmação Remover</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                Ops :( <br />
+                Deseja Mesmo Remover o Funcionário?
+            </div>
+            <div class="modal-footer">
+                <form asp-action="Remover">
+                    <!-- O atributo "id deve ser o mesmo informado no metodo POST da action de remover"-->
+                    <input type="hidden" name="id" id="idFuncionario" />
+                    <button type="button" class="btn btn-secondary" style="background-color:mediumpurple" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-success">Sim</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
