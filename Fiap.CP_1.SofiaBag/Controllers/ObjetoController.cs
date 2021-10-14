@@ -1,4 +1,5 @@
 ﻿using Fiap.CP_1.SofiaBag.Models;
+using Fiap.CP_1.SofiaBag.Persistencia;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
@@ -10,13 +11,19 @@ namespace Fiap.CP_1.SofiaBag.Controllers
 {
     public class ObjetoController : Controller
     {
-        private static List<Objetos> _banco = new List<Objetos>();
-        private static int _generator = 1;
+        private MochilaContext _context;
+
+        public ObjetoController(MochilaContext context)
+        {
+            _context = context;
+        }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(string nomeBuscado)
         {
-            return View(_banco);
+            var busca = _context.Objetos.Where(str => 
+                (str.Nome.Contains(nomeBuscado) || nomeBuscado == null)).ToList();
+            return View(busca);
         }
 
         [HttpGet]
@@ -29,8 +36,8 @@ namespace Fiap.CP_1.SofiaBag.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Objetos obj)
         {
-            obj.Codigo = _generator++;
-            _banco.Add(obj);
+            _context.Objetos.Add(obj);
+            _context.SaveChanges();
             TempData["msg"] = "Objeto Cadastrado com Sucesso!";
             return RedirectToAction("Cadastrar");
         }
@@ -38,8 +45,10 @@ namespace Fiap.CP_1.SofiaBag.Controllers
         [HttpPost]
         public IActionResult Deletar(int id) 
         {
+            var busca = _context.Objetos.Find(id);
             // Metodo para procurar na lista de objetos cadastrados (Banco de Dados) e remover
-            _banco.RemoveAll(num => num.Codigo == id);
+            _context.Objetos.Remove(busca);
+            _context.SaveChanges();
 
             TempData["msg"] = "Objeto Removido com Sucesso";
             return RedirectToAction("Index");
@@ -50,34 +59,20 @@ namespace Fiap.CP_1.SofiaBag.Controllers
         {
             CarregarCores();
             // apos no clique no botao "editar" no objeto da tabela esse metodo irá procurar ele na lista de objetos (banco de dados)
-            var objeto = _banco.Find(num => num.Codigo == id);
+            var objeto = _context.Objetos.Find(id);
             return View(objeto);
         }
 
         [HttpPost]
         public IActionResult Editar(Objetos objs)
         {
-            _banco[_banco.FindIndex(num => num.Codigo == objs.Codigo)] = objs;
+            _context.Objetos.Update(objs);
+            _context.SaveChanges();
             TempData["msg"] = "Objeto Editado com Sucesso!";
-            TempData["rfid"] = objs.Codigo;
+            TempData["rfid"] = objs.CodigoId;
 
             return RedirectToAction("Index");
         }
-
-        [HttpGet]
-        public IActionResult Pesquisar(string searchName)
-        {
-            //var nomes = from m in _banco select m;
-            if ( !String.IsNullOrEmpty(searchName))
-            {
-                //nomes = nomes.Where(str => str.Nome.Contains(nomePesquisado));
-               var search = _banco.Where(str => str.Nome.Contains(searchName)).ToList();
-
-                return View(search);
-            }
-            return View("Index");
-        }
-   
 
 
         public void CarregarCores()

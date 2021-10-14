@@ -8,16 +8,16 @@
 
 <button type="button" style="margin-bottom:1rem" class="btn btn-primary btn-lg btn-block">Seus Objetos Cadastrados</button>
 
-<form asp-action="Pesquisar" method="get" class="row row-cols-lg-auto g-3 align-items-center">
+<form class="row row-cols-lg-auto g-3 align-items-center">
     <div class="col-8" style="margin-bottom:9px">
         <div class="input-group">
             <div class="input-group-text">Filtro</div>
-            <input class="form-control" type="text" name="searchName" id="searchName" placeholder="Digite um Nome...">
+            <input class="form-control" type="text" name="nomeBuscado" id="nomeBuscado" placeholder="Digite um Nome...">
         </div>
     </div>
 
     <div class="col-2" style="margin-bottom:10px">
-        <input type="submit" class="btn btn-primary" value="Pesquisar"/>
+        <input type="submit" class="btn btn-primary" value="Pesquisar" />
     </div>
 
     <div class="col-2" style="margin-bottom:10px">
@@ -27,8 +27,14 @@
 
 </form>
 
-<table style="border-radius:10px"  class="table table-bordered table-dark">
-    <tr >
+@if (Model.Count == 0)
+{
+    <sucess-msg mensagem="Nenhum objeto cadastrado atualmente" class="alert alert-warning"></sucess-msg>
+}
+
+
+<table style="border-radius:10px" class="table table-bordered table-dark">
+    <tr>
         <th>RFID</th>
         <th>Nome</th>
         <th>Descrição</th>
@@ -41,18 +47,20 @@
     @foreach (var itens in Model)
     {
         <tr>
-            <td>@itens.Codigo</td>
+            <td>@itens.CodigoId</td>
             <td>@itens.Nome</td>
             <td>@itens.Descricao</td>
             <td>@(itens.Ativo?"True":"False")</td>
             <td>@itens.DtCadastro.ToShortDateString()</td>
             <td>@itens.Cor</td>
             <td style="justify-content:space-between">
-                <button onclick="idObject.value = @itens.Codigo" type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">Remover</button>
-                <a class="btn btn-sm btn-warning" asp-action="editar" asp-route-id="@itens.Codigo">Editar</a>
+                <button onclick="idObject.value = @itens.CodigoId" type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#exampleModal">Remover</button>
+                <a class="btn btn-sm btn-warning" asp-action="editar" asp-route-id="@itens.CodigoId">Editar</a>
             </td>
 
         </tr>
+
+
     }
 </table>
 

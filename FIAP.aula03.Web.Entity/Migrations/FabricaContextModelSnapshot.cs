@@ -19,6 +19,68 @@ namespace FIAP.aula03.Web.Entity.Migrations
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("FIAP.aula03.Web.Entity.Models.Beneficio", b =>
+                {
+                    b.Property<int>("BeneficioId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("ID")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Disponivel")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("BeneficioId");
+
+                    b.ToTable("TB_BENEFICIO");
+                });
+
+            modelBuilder.Entity("FIAP.aula03.Web.Entity.Models.Departamento", b =>
+                {
+                    b.Property<int>("DepartamentoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("ID")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NomeDepart")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.HasKey("DepartamentoId");
+
+                    b.ToTable("TB_DEPART");
+                });
+
+            modelBuilder.Entity("FIAP.aula03.Web.Entity.Models.Endereco", b =>
+                {
+                    b.Property<int>("EnderecoId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("ID")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Cep")
+                        .IsRequired()
+                        .HasMaxLength(9)
+                        .HasColumnType("nvarchar(9)");
+
+                    b.Property<string>("Logradouro")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("EnderecoId");
+
+                    b.ToTable("TB_ENDERECO");
+                });
+
             modelBuilder.Entity("FIAP.aula03.Web.Entity.Models.Funcionario", b =>
                 {
                     b.Property<int>("FuncionarioId")
@@ -33,6 +95,12 @@ namespace FIAP.aula03.Web.Entity.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("DT_CONTRATACAO");
 
+                    b.Property<int?>("DepartamentoId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("EnderecoId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Genero")
                         .HasColumnType("int");
 
@@ -46,7 +114,75 @@ namespace FIAP.aula03.Web.Entity.Migrations
 
                     b.HasKey("FuncionarioId");
 
+                    b.HasIndex("DepartamentoId");
+
+                    b.HasIndex("EnderecoId");
+
                     b.ToTable("TB_FUNCIONARIO");
+                });
+
+            modelBuilder.Entity("FIAP.aula03.Web.Entity.Models.FuncionarioBeneficio", b =>
+                {
+                    b.Property<int>("BeneficioId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FuncionarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BeneficioId", "FuncionarioId");
+
+                    b.HasIndex("FuncionarioId");
+
+                    b.ToTable("TB_FUNCIONARIO_BENEFICIO");
+                });
+
+            modelBuilder.Entity("FIAP.aula03.Web.Entity.Models.Funcionario", b =>
+                {
+                    b.HasOne("FIAP.aula03.Web.Entity.Models.Departamento", "Departamento")
+                        .WithMany("Funcionarios")
+                        .HasForeignKey("DepartamentoId");
+
+                    b.HasOne("FIAP.aula03.Web.Entity.Models.Endereco", "Endereco")
+                        .WithMany()
+                        .HasForeignKey("EnderecoId");
+
+                    b.Navigation("Departamento");
+
+                    b.Navigation("Endereco");
+                });
+
+            modelBuilder.Entity("FIAP.aula03.Web.Entity.Models.FuncionarioBeneficio", b =>
+                {
+                    b.HasOne("FIAP.aula03.Web.Entity.Models.Beneficio", "Beneficio")
+                        .WithMany("FuncionarioBeneficios")
+                        .HasForeignKey("BeneficioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FIAP.aula03.Web.Entity.Models.Funcionario", "Funcionario")
+                        .WithMany("FuncionarioBeneficios")
+                        .HasForeignKey("FuncionarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Beneficio");
+
+                    b.Navigation("Funcionario");
+                });
+
+            modelBuilder.Entity("FIAP.aula03.Web.Entity.Models.Beneficio", b =>
+                {
+                    b.Navigation("FuncionarioBeneficios");
+                });
+
+            modelBuilder.Entity("FIAP.aula03.Web.Entity.Models.Departamento", b =>
+                {
+                    b.Navigation("Funcionarios");
+                });
+
+            modelBuilder.Entity("FIAP.aula03.Web.Entity.Models.Funcionario", b =>
+                {
+                    b.Navigation("FuncionarioBeneficios");
                 });
 #pragma warning restore 612, 618
         }

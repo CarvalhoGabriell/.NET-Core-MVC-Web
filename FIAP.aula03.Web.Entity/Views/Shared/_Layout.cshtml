@@ -14,7 +14,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Funcionarios</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Churros Factory</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,17 +25,30 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link" asp-area="" asp-controller="Beneficio" asp-action="Index">Beneficios</a>
                         </li>
 
+                        <!--Funcionarios-->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Seus Funcionarios
+                                Funcionarios
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" asp-action="cadastrar" asp-controller="Funcionario">Cadastrar</a>
                                 <a class="dropdown-item" asp-action="index" asp-controller="Funcionario">Listar Funcionários</a>
-                                <a class="dropdown-item" asp-action="index" asp-controller="Home">Home</a>
+                    
+                            </div>
+                        </li>
+
+                        <!--Departamentos-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Departamentos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-action="cadastrar" asp-controller="Departamento">Cadastrar</a>
+                                <a class="dropdown-item" asp-action="index" asp-controller="Departamento">Listar Departamentos</a>
+                            
                             </div>
                         </li>
                     </ul>

@@ -1,0 +1,23 @@
+﻿@model  Departamento
+
+@{
+    ViewData["title"] = "Cadastro";
+}
+
+
+<h1 style="margin-bottom:1.5rem">
+    Registro de Departamentos
+</h1>
+<mensagem texto="@TempData["msg"]"></mensagem>
+
+<form asp-action="Cadastrar">
+    <div class="form-group">
+
+        <label asp-for="NomeDepart"></label>
+        <input asp-for="NomeDepart" class="form-control">
+
+    </div>
+
+    <input type="submit" value="Cadastrar" class="btn btn-group-lg btn-dark"/>
+
+</form>

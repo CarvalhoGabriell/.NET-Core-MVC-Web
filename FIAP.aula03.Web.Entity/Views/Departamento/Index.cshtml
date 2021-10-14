@@ -1,0 +1,56 @@
+﻿@model IList<Departamento>
+
+@{
+    ViewData["title"] = "Index Departamentos";
+}
+
+<h1  style="background-color: darkcyan;" class="badge badge-primary">Registro de Departamentos</h1>
+
+
+<mensagem texto="@TempData["msg"]"></mensagem>
+
+<div class="row">
+
+    @foreach (var itens in Model)
+    {
+        <div class="card col-4" style="width:30rem; border-radius:1rem; background-color: darkcyan; margin-top: 1rem">
+            <div class="card-body">
+                <h2 class="card-title">Departamento</h2>
+                <h5 class="card-subtitle" style="margin-bottom:1.5rem">@itens.NomeDepart</h5>
+                <a href="#" class="btn btn-sm btn-primary">Funcionarios</a>
+                <button onclick="idDepartamento.value = @itens.DepartamentoId" type="button" class="btn btn-outline-danger" style="margin-left:1rem" data-toggle="modal" data-target="#exampleModal">Remover</button>
+            </div>
+        </div>
+
+    }
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color:mediumpurple">
+                <h5 class="modal-title" id="exampleModalLabel">Confirmação Remover</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                Ops :( <br />
+                Deseja Remover esse Departamento?
+            </div>
+            <div class="modal-footer">
+                <form asp-action="Deletar">
+                    <!-- O atributo "id deve ser o mesmo informado no metodo POST da action de remover"-->
+                    <input type="hidden" name="id" id="idDepartamento" />
+                    <button type="button" class="btn btn-secondary" style="background-color:mediumpurple" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-success">Sim</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

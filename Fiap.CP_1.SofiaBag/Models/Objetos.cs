@@ -2,15 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Fiap.CP_1.SofiaBag.Models
 {
+    [Table("TB_OBJETOS")]
     public class Objetos
     {
-        [HiddenInput]
-        public int Codigo { get; set; }
+        [HiddenInput][Key]
+        public int CodigoId { get; set; }
 
         public string Nome { get; set; }
 
