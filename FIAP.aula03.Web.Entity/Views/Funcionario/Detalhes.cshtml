@@ -1,0 +1,52 @@
+﻿@model Funcionario
+
+
+@{
+    ViewData["title"] = "Detalhes do Beneficio";
+}
+
+<hr />
+
+<mensagem texto="@TempData["msg"]"></mensagem>
+
+<div class="row" >
+    <div class="col"  style="border:groove ;border-color:darkgrey">
+        <h1>Funcionário</h1>
+        <h2>@Model.Nome   (@Model.Departamento.NomeDepart)</h2>
+        <span class="badge badge-success rounded-pill">Salário: R$ @Model.Salario.ToString("n")</span>
+        <h5 class="font-weight-bold">Data Contratação: @Model.DataContratacao?.ToShortDateString()</h5>
+
+    </div>
+
+    <div class="col" style="border:inset ;border-color:darkgrey">
+        <h1>Endereços</h1>
+        <h4 class="font-weight-bold">Logradouro: @Model.Endereco.Logradouro</h4>
+        <h5 class="font-weight-bold">CEP: @Model.Endereco.Cep</h5>
+
+    </div>
+</div>
+
+    <div class="align-content-md-center">
+        <h2>Benefícios</h2>
+        <form asp-action="detalhes" class="form-inline">
+            <div class="input-group">
+                <input type="hidden" name="FuncionarioId" value="@Model.FuncionarioId"/>
+                <select class="form-control" asp-items="@ViewBag.beneficiosSelect" name="BeneficioId">
+                    <option>Selecione:</option>
+
+                </select>
+            </div>
+            <button style="margin-left:0.5rem" type="submit" class="btn btn-success">Adicionar</button>
+
+        </form>
+ 
+        <ul class="list-group">
+
+            @foreach(var itens in ViewBag.beneficios)
+            {
+                <li class="list-group-item"> @itens.Nome</li>
+            }
+         
+        </ul>
+
+    </div>

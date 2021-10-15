@@ -1,5 +1,6 @@
 ﻿using FIAP.aula03.Web.Entity.Models;
 using FIAP.aula03.Web.Entity.Persistencia;
+using FIAP.aula03.Web.Entity.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,19 +13,64 @@ namespace FIAP.aula03.Web.Entity.Controllers
 {
     public class FuncionarioController : Controller
     {
-        private FabricaContext _context;
-        public FuncionarioController(FabricaContext context)
+        private IFuncBeneficioRepository _funcBeneficioRepository;
+
+        private IFuncionarioRepository _funcRepository;
+
+        private IDepartamentoRepository _departamentoRepository;
+
+        private IBeneficioRepository _beneficioRepository;
+
+
+        public FuncionarioController(IBeneficioRepository beneficioRepository, 
+            IFuncionarioRepository funcRepository, 
+            IDepartamentoRepository departamentoRepository,
+            IFuncBeneficioRepository funcBeneficio)
         {
-            _context = context;        
+            _funcBeneficioRepository = funcBeneficio;
+            _departamentoRepository = departamentoRepository;
+            _funcRepository = funcRepository;
+            _beneficioRepository = beneficioRepository;        
         }
 
         private void CarregarDepartamentos()
         {
             // pesquisa todos os departamentos
-           var lista = _context.Departs.OrderBy(d=> d.NomeDepart).ToList();
+            var lista = _departamentoRepository.Listar();
 
             // envia para a view as opçoes do select para selecionar 
             ViewBag.departamentos = new SelectList(lista, "DepartamentoId", "NomeDepart");
+        }
+
+        [HttpPost]
+        public IActionResult Detalhes(FuncionarioBeneficio funcBeneficio)
+        {
+            _funcBeneficioRepository.Cadastrar(funcBeneficio);
+            _funcBeneficioRepository.Commitar();
+            TempData["msg"] = "Beneficio Associado com sucesso!";
+
+            return RedirectToAction("Detalhes", new{ id= funcBeneficio.FuncionarioId});
+        }
+
+        [HttpGet]
+        public IActionResult Detalhes(int id)
+        {
+            var funcionario = _funcRepository.BuscarPorId(id);
+
+            // pesquisar todos beneficios disponiveis cadastrados
+            var allBeneficios = _beneficioRepository.BuscarPor(b => b.Disponivel);
+
+            // pesquisar beneficios associados ao funcionario
+            var beneficioFunc = _beneficioRepository.BuscarPorFuncionario(id);
+
+            // lista filtrada mostrando todos os beneficios que não estao associados a um funcionario
+            var listaFiltro = allBeneficios.Where(b => !beneficioFunc.Any(b1 => b1.BeneficioId == b.BeneficioId));
+
+            ViewBag.beneficiosSelect = new SelectList(listaFiltro, "BeneficioId", "Nome");
+            
+            ViewBag.beneficios = beneficioFunc;
+            
+            return View(funcionario);
         }
 
         // o sinal de ? atribui nulo ao parametro pré setado
@@ -33,12 +79,9 @@ namespace FIAP.aula03.Web.Entity.Controllers
         public IActionResult Index(string nomeBuscado, Genero? genBuscado)
         {
            
-            var busca = _context.Funcionarios.Where(
+            var busca = _funcRepository.BuscarPor(
                 str => (str.Nome.Contains(nomeBuscado) || nomeBuscado == null ) && 
-                (genBuscado == str.Genero || genBuscado == null))
-                .Include(f => f.Departamento)
-                .Include(f => f.Endereco) // inclui um endereço no resultado da pesquisa
-                .ToList();
+                (genBuscado == str.Genero || genBuscado == null));
             return View(busca);
         }
 
@@ -52,21 +95,17 @@ namespace FIAP.aula03.Web.Entity.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Funcionario func)
         {
-            _context.Funcionarios.Add(func);
-            _context.SaveChanges();
+            _funcRepository.Cadastrar(func);
+            _funcRepository.Commitar();
             TempData["msg"] = "Funcionario Cadastrado com Sucesso!";
-           return RedirectToAction("Cadastrar");
+           return RedirectToAction("Detalhes", new { id = func.FuncionarioId});
         }
 
         [HttpGet]
         public IActionResult Editar(int id)
         {
             CarregarDepartamentos();
-            var func = _context.Funcionarios
-                .Include(f => f.Endereco)
-                .Include(f => f.Departamento)
-                .Where(f => f.FuncionarioId == id)
-                .FirstOrDefault();
+            var func = _funcRepository.BuscarPorId(id);
             
             return View(func);
         }
@@ -76,8 +115,8 @@ namespace FIAP.aula03.Web.Entity.Controllers
         public IActionResult Editar(Funcionario obj)
         {
 
-            _context.Funcionarios.Update(obj);
-            _context.SaveChanges();
+            _funcRepository.Atualizar(obj);
+            _funcRepository.Commitar();
             TempData["msg"] = "Funcionário Atualizado com Sucesso";
             return RedirectToAction("Index");
 
@@ -86,9 +125,8 @@ namespace FIAP.aula03.Web.Entity.Controllers
         [HttpPost]
         public IActionResult Remover(int id)
         {
-            var func = _context.Funcionarios.Find(id);
-            _context.Funcionarios.Remove(func);
-            _context.SaveChanges();
+            _funcRepository.Remover(id);
+            _funcRepository.Commitar();
 
             TempData["msg"] = "Funcionário Removido com sucesso";
             return RedirectToAction("Index");

@@ -388,3 +388,4 @@ C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\FIAP.aula03
 C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\FIAP.aula03.Web.Entity\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Cadastrar.cshtml.g.cs
 C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\FIAP.aula03.Web.Entity\obj\Debug\netcoreapp3.1\Razor\Views\Departamento\Index.cshtml.g.cs
 C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\FIAP.aula03.Web.Entity\obj\Debug\netcoreapp3.1\Razor\Views\Beneficio\Index.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\FIAP.aula03.Web.Entity\obj\Debug\netcoreapp3.1\Razor\Views\Funcionario\Detalhes.cshtml.g.cs

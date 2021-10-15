@@ -1,5 +1,6 @@
 ﻿using FIAP.aula03.Web.Entity.Models;
 using FIAP.aula03.Web.Entity.Persistencia;
+using FIAP.aula03.Web.Entity.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,17 +11,18 @@ namespace FIAP.aula03.Web.Entity.Controllers
 {
     public class DepartamentoController : Controller
     {
-        private FabricaContext _context;
+        private IDepartamentoRepository _departsRepository;
 
-        public DepartamentoController (FabricaContext context)
+        public DepartamentoController (IDepartamentoRepository departsrespository)
         {
-            _context = context;
+            _departsRepository = departsrespository;
+           
         }
 
         [HttpGet]
         public IActionResult Index()
         {
-            var lista = _context.Departs.ToList();
+            var lista = _departsRepository.Listar();
             return View(lista);
         }
 
@@ -33,8 +35,8 @@ namespace FIAP.aula03.Web.Entity.Controllers
         [HttpPost]
         public IActionResult Cadastrar(Departamento depart)
         {
-            _context.Departs.Add(depart);
-            _context.SaveChanges();
+            _departsRepository.Cadastrar(depart);
+            _departsRepository.Commitar();
             TempData["msg"] = "Departamento cadastrado com sucesso!";
             return RedirectToAction("Cadastrar");
         }
@@ -42,9 +44,8 @@ namespace FIAP.aula03.Web.Entity.Controllers
         [HttpPost]
         public IActionResult Deletar(int id)
         {
-            var depart = _context.Departs.Find(id);
-            _context.Departs.Remove(depart);
-            _context.SaveChanges();
+            _departsRepository.Remover(id);
+            _departsRepository.Commitar();
             TempData["msg"] = "Departamento Removido!";
             return RedirectToAction("Index");
         }

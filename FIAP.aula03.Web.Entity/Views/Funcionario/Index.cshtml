@@ -41,7 +41,9 @@
         <th>Status</th>
         <th>Departamento</th>
         <th>Endereço</th>
-        <th>Ações</th>
+        <th>Remover</th>
+        <th>Editar</th>
+        <th>Detalhes</th>
     </tr>
 
     @foreach (var itens in Model)
@@ -56,8 +58,14 @@
             <td>@itens.Departamento?.NomeDepart</td>
             <td>@(itens.Endereco == null?"-----------": itens.Endereco.Logradouro)</td>
             <td>
-                <a asp-route-id="@itens.FuncionarioId" asp-action="Editar" class="btn btn-sm btn-dark">Editar</a>
                 <button onclick="idFuncionario.value = @itens.FuncionarioId" class="btn btn-sm btn-danger" type="button" data-toggle="modal" data-target="#exampleModal">Remover</button>
+            </td>
+            <td>
+
+                <a asp-route-id="@itens.FuncionarioId" asp-action="Editar" class="btn btn-sm btn-dark">Editar</a>
+            </td>
+            <td>
+                <a asp-action="detalhes" asp-route-id="@itens.FuncionarioId" class="btn btn-sm btn-success">Beneficios</a>
             </td>
         </tr>
     }

@@ -1,5 +1,6 @@
 ﻿using FIAP.aula03.Web.Entity.Models;
 using FIAP.aula03.Web.Entity.Persistencia;
+using FIAP.aula03.Web.Entity.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,27 +11,31 @@ namespace FIAP.aula03.Web.Entity.Controllers
 {
     public class BeneficioController : Controller
     {
-        private FabricaContext _context;
+        private IBeneficioRepository _beneficioRepository;
 
-        public BeneficioController(FabricaContext context)
+        public BeneficioController(IBeneficioRepository beneficioRepository)
         {
-            _context = context;                    
+            _beneficioRepository = beneficioRepository;                    
         }
 
         public IActionResult Index()
         {
-            ViewBag.beneficios = _context.Beneficios.ToList();
+            ViewBag.beneficios = _beneficioRepository.Listar();
             return View();
         }
 
         [HttpPost]
         public IActionResult Cadastrar(Beneficio bens)
         {
-            _context.Beneficios.Add(bens);
-            _context.SaveChanges();
+            _beneficioRepository.Cadastrar(bens);
+            _beneficioRepository.Commitar();
             TempData["msg"] = "Beneficio Registrado!";
 
             return RedirectToAction("Index");
         }
+
+        /*
+         * fazer o metodo que faça a remoção do beneficio
+         */
     }
 }

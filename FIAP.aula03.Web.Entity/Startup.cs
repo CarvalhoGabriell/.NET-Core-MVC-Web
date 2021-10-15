@@ -1,4 +1,5 @@
 using FIAP.aula03.Web.Entity.Persistencia;
+using FIAP.aula03.Web.Entity.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -29,6 +30,15 @@ namespace FIAP.aula03.Web.Entity
             // configuração a injeção da dependencia do Context
             services.AddDbContext<FabricaContext>(
                 op => op.UseSqlServer(Configuration.GetConnectionString("conexao")));
+
+            // configurar a injeção de dependencia do Respository
+            services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
+
+            services.AddScoped<IDepartamentoRepository, DepartamentoRepository>();
+
+            services.AddScoped<IBeneficioRepository, BeneficioRepository>();
+
+            services.AddScoped<IFuncBeneficioRepository, FuncBeneficioRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
