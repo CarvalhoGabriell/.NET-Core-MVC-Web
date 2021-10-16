@@ -21,19 +21,17 @@ namespace Fiap.CP_1.SofiaBag.Models
         [Display(Name ="Nome da sua Mochila")] [MaxLength(15)]
         public string NomeMochila { get; set; }
 
-        [MaxLength(2)]
         public int Idade { get; set; }
 
         [Display(Name ="Data Nascimento")] [DataType(DataType.Date)]
         public DateTime DtNascimento { get; set; }
 
         [Display(Name = "Gênero")]
-        public Genero sexo { get; set; }
+        public Genero Sexo { get; set; }
 
-
+    }
         public enum Genero
         {
             Masculino, Feminino, Neutro, Outros
         }
-    }
 }

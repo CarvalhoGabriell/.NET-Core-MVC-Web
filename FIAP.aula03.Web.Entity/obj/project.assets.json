@@ -6299,25 +6299,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabriel\\.nuget\\packages\\": {}
+    "C:\\Users\\Mateus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gabriel\\Visual Stuid .NET Core\\FIAP\\Fiap.Aula.Web.Exemplo01\\FIAP.aula03.Web.Entity\\FIAP.aula03.Web.Entity.csproj",
+      "projectUniqueName": "C:\\Users\\Mateus\\source\\repos\\.NET-Core-MVC-Web\\FIAP.aula03.Web.Entity\\FIAP.aula03.Web.Entity.csproj",
       "projectName": "FIAP.aula03.Web.Entity",
-      "projectPath": "C:\\Users\\Gabriel\\Visual Stuid .NET Core\\FIAP\\Fiap.Aula.Web.Exemplo01\\FIAP.aula03.Web.Entity\\FIAP.aula03.Web.Entity.csproj",
-      "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gabriel\\Visual Stuid .NET Core\\FIAP\\Fiap.Aula.Web.Exemplo01\\FIAP.aula03.Web.Entity\\obj\\",
+      "projectPath": "C:\\Users\\Mateus\\source\\repos\\.NET-Core-MVC-Web\\FIAP.aula03.Web.Entity\\FIAP.aula03.Web.Entity.csproj",
+      "packagesPath": "C:\\Users\\Mateus\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mateus\\source\\repos\\.NET-Core-MVC-Web\\FIAP.aula03.Web.Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mateus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
