@@ -384,3 +384,5 @@ C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.CP_1.S
 C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.CP_1.SofiaBag\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.CP_1.SofiaBag\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.CP_1.SofiaBag\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.CP_1.SofiaBag\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Cadastrar.cshtml.g.cs
+C:\Users\Gabriel\Visual Stuid .NET Core\FIAP\Fiap.Aula.Web.Exemplo01\Fiap.CP_1.SofiaBag\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Index.cshtml.g.cs
